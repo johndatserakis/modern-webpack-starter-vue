@@ -1,0 +1,22 @@
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": [
+          2,
+          4
+        ],
+        "semi": [1, "never"],
+        "no-alert": 0,
+        "arrow-body-style": [0],
+        "import/no-unresolved": "off",
+        "import/first": "off",
+        "import/newline-after-import": "off",
+        "import/no-duplicates": "off",
+        "comma-dangle": "off",
+        "no-console": "off"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}

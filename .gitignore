@@ -1,0 +1,15 @@
+.idea
+.DS_Store
+.htaccess
+application/cache/*
+application/config/database.php
+application/logs/*
+uploads/*
+ftp/*
+.*.sw*
+.screenrc
+*.sql.gz
+*.bak
+admin/uploaded-files
+/nbproject/private/
+node_modules

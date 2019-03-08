@@ -1,0 +1,120 @@
+body {
+    min-height: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    color: $font-color;
+    font-weight: 400;
+    background: $white;
+    font-family: $font-family-base;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+//These two rules are for proper footer/page alignment
+.page-wrapper {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-content-wrapper {
+    //flex: 1; //this doesn't work for ie too well
+    flex: 1 0 auto;
+
+    //navbar is 40px tall - only needed with fixed nav
+    // margin-top: 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $font-color;
+    text-transform: none;
+    font-family: $font-family-base;
+    font-weight: 500;
+}
+@media(max-width:992px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+//Main link styling
+a {
+    color: $blue;
+    // transition: $transition; // turning off for brand style
+
+    &:hover {
+        color: $dark-blue;
+    }
+
+    //Turning off for now because of buttons
+    // &:visited {
+    //     color: $dark-blue;
+    // }
+}
+
+//At large width, container-fluid should have a bit
+//more padding left and right
+@media (min-width: 1400px) {
+    .container-fluid {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+//For vue-router
+.router-link-exact-active {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+//For vue-progress
+.vue-progress-path {
+    path {
+      stroke-width: 30;
+    }
+
+    .progress {
+      stroke: $light-blue;
+    }
+
+    .background {
+      stroke: darken($light-grey, 6%);
+    }
+
+    &--positive{
+        .progress {
+          stroke: $green;
+        }
+    }
+
+    &--negative{
+        .progress {
+          stroke: $red;
+        }
+    }
+}
+
+//Fix weird bold issue
+b, strong {
+  font-weight: 500;
+}
+
+//For toasts
+.toasted-container .toasted {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    line-height: 1.4;
+}
